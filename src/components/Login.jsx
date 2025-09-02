@@ -21,7 +21,6 @@ const Login = () => {
     //validation
  
     const message=validateData(email.current.value,password.current.value,name.current ? name.current.value : null);
-    console.log(message);
     setErrorMessage(message);
     if(message)
       return;//if thers is some msg like "Email and Password is required" then return

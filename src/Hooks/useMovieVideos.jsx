@@ -10,7 +10,6 @@ const useMovieVideos = ({movieId}) => {
      const response= await fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`, API_OPTIONS)
      const json=await response.json();
      const trailer=json.results[0];//in case of multiple trailers
-     console.log(trailer);
     dispatch(addTrailerVideo(trailer.key));
     }
     useEffect(()=>
